@@ -8,11 +8,41 @@ public class Runner {
         //instantiate a Calc object
         Calc myCalculator = new Calc();
         //get user input for two numbers
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Please enter the first number: ");
-        double n1 = scan.nextDouble();
-        System.out.println("Please enter the second number: ");
-        double n2 = scan.nextDouble();
+
+
+        boolean isTrue = true;
+        double n1 = 0;
+        while (isTrue) {
+            try {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Please enter the first number: ");
+
+                n1 = scan.nextDouble();
+                isTrue = false;
+            }
+            catch (Exception e){
+                System.out.println("Enter a valid number.");
+                isTrue = true;
+            }
+
+        }
+
+        boolean isTrue2 = true;
+        double n2 = 0;
+        while (isTrue2) {
+            try {
+                Scanner scan = new Scanner(System.in);
+                System.out.println("Please enter the second number: ");
+
+                n2 = scan.nextDouble();
+                isTrue2 = false;
+            }
+            catch (Exception e){
+                System.out.println("Enter a valid number.");
+                isTrue2 = true;
+            }
+
+        }
 
         //pass the numbers to the Calc object
         myCalculator.setNum1(n1);
